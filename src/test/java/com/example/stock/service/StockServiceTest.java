@@ -42,7 +42,7 @@ class StockServiceTest {
 
 
         //실패 원인 : 레이스 컨디션 발생. 둘 이상의 thread가 공유데이터에 엑세스할 수 있고 동시에 변경을 하려고 할 때 발생한다.
-        //해결 방안 : 하나의 요청이 완료된 후 다음 요청이 데이터에 접근 할 수 있도록 한다.
+        //해결 방안 : 데이터에 한개의 쓰레드만 접근이 가능하도록 하면 된다.
         @Test
         public void 동시에_100개의_요청() throws InterruptedException {
             int threadCount = 100;
