@@ -18,7 +18,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class StockServiceTest {
         @Autowired
-        private StockService stockService;
+        private PessimisticLockStockService stockService; //test1. pessimisticLock
+        //private StockService stockService; //test1.synchronized
         @Autowired
         private StockRepository stockRepository;
         @BeforeEach //데이터 생성
